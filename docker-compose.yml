@@ -5,6 +5,11 @@ services:
         ports: 
             - "6379:6379"
     sql:
-        image: andygiebel/librarysql:latest
+        image: jeffrygonzalez/librarysql:latest
         ports:
             - "1433:1433"
+    rabbit:
+        image: rabbitmq:3-management
+        ports:
+            - "5672:5672"
+            - "15672:15672"
